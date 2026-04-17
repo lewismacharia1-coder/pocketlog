@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Farm Log</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+
+    <header class="bg-emerald-700 text-white p-4 shadow-md">
+        <h1 class="text-xl font-bold flex items-center gap-2">
+            🌿 Pocket Farm Log
+        </h1>
+    </header>
+
+    <main class="p-4 max-w-md mx-auto space-y-6">
+        
+        <section class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+            <h2 class="text-lg font-semibold mb-4 text-emerald-800">New Entry</h2>
+            <form id="logForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-500 mb-1">Category</label>
+                    <select id="category" class="w-full p-3 bg-stone-100 rounded-xl outline-emerald-500">
+                        <option value="Feeding">🚜 Feeding</option>
+                        <option value="Watering">💧 Watering</option>
+                        <option value="Health">💊 Health/Vet</option>
+                        <option value="Harvest">🧺 Harvest</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-500 mb-1">Notes</label>
+                    <input id="note" type="text" placeholder="e.g., North pasture sheep fed" 
+                        class="w-full p-3 bg-stone-100 rounded-xl outline-emerald-500">
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition">
+                    Save to Log
+                </button>
+            </form>
+        </section>
+
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold text-emerald-800">Recent Activity</h2>
+                <button id="clearBtn" class="text-xs text-red-500 font-medium">Clear All</button>
+            </div>
+            <div id="logContainer" class="space-y-3">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
